@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Borgonovo T&P</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link id="Fancy" rel="stylesheet" type="text/css" href="Style.css" />
+        <link id="Simple" rel="stylesheet" type="text/css" href="Style_Simple.css" disabled="disabled"/>
+        <link id="NoPic" rel="stylesheet" type="text/css" href="Nopics.css" disabled="disabled"/>
+    </head>
+    
+   <header>        
+        <div  class='Title'>
+            <h2>Borgonovo <sub>Traducción y Programación</sub></h2>
+        </div>
+        <a href="#Intro" class="Nav">
+            <div class="Nav">                
+                <h2>Introducción</h2>                
+            </div>    
+        </a>
+        <a href="#Media" class="Nav">
+            <div class="Nav">
+                <h2>Media</h2>
+            </div>
+        </a>
+        <a href="#contacto" class="Nav">
+            <div class="Nav">
+                <h2>Contáctenos</h2>            
+            </div>
+        </a>
+        <div class="Settings" id="Settings">
+            <img src="Pictures/Gear.png" id="Gear" class="Menu">
+            <ul class="Items">
+                <li class="MenuItem" id="Style">
+                  <span class="ItemText">Estilo</span>
+                  <div class="dropdown">
+                    <button onclick="myFunction()" class="dropbtn">Estilos</button>
+                    <div id="myDropdown" class="dropdown-content">
+                        <a href="#" onclick="toggleStyle(0)">Simple</a>
+                        <a href="#" onclick="toggleStyle(1)">Elaborado</a>
+                        <a href="#" onclick="toggleStyle(2)">Sin imágenes</a>
+                    </div>
+                  </div>
+                </li>
+                <li class="MenuItem" >
+                    <span class="ItemText">Modo Nocturno</span> 
+                    <input type="checkbox" id="switch" onclick="ToggleDN()"/><label for="switch" class="DNToggle">Toggle</label>
+                </li>
+                <li class="MenuItem">
+                  <span class="ItemText">Idioma</span>
+                  <a href="index_ENG.html"><button id="LangToggle" 
+                    style="background-color : #4dd432; 
+                    cursor: pointer; margin-left: 8vh">
+                    English
+                </button></a>
+                </li>
+            </ul>
+            
+        </div>
+    </header>
+
+    <script src="Scripts.js"></script>
+    <body onload="currentSlide(1);" class="light-theme || dark-theme">        
+            
+        <img  class="StaticImg" src="Pictures/img01.jpg" id="Intro">        
+        
+        <h1 class='Section'>Servicios en línea</h1>
+        <p class="Paragraph">Páginas a medida del usuario, de presentación, compra y demás. Texto de relleno</p>
+
+        <h1 class='Section'> Nuestros Servicos</h1>
+        <dl >
+            <h4>Páginas Web HTML5/Javascript</h4>
+                <dd>Adaptadas a las necesidades del usuario. Desde simples páginas de presentación a tiendas online</dd>
+            <h4>Asistencia en Streaming</h4>
+                <dd>Setup OBS,creación de layouts</dd>
+            <h4>Aplicaciones de escritorio C#</h4>
+                <dd>Sistemas de inventario y registro de pagos</dd>
+            <h4>Interfaz Web Offline</h4>
+                <dd>Programas para uso personal con una interfaz sencilla y fácil de usar</dd>
+            <h4>Edición de videos</h4>
+                <dd>Para Youtube u otras redes sociales</dd>
+            <h4>Traducciones Inglés/Español</h4>
+            <dd>Español Neutro, Inglés Británico, Inglés Estadounidense</dd>
+        </dl>
+        
+        <div class="container" id="Media">
+
+            <!-- Full-width images with number text -->
+            <div class="mySlides">
+              <div class="numbertext">1 / 5</div>
+                <img src="Pictures/PromoServicios.png" class="SlidePic">
+            </div>
+
+            <div class="mySlides">
+              <div class="numbertext">2 / 5</div>
+                <img src="Pictures/PromoProg.png" class="SlidePic">
+            </div>
+
+            <div class="mySlides">
+              <div class="numbertext">3 / 5</div>
+                <img src="Pictures/PromoOtro.png" class="SlidePic">
+            </div>
+
+            <div class="mySlides">
+              <div class="numbertext">4 / 5</div>
+                <img src="Pictures/PromoTrad.png" class="SlidePic">
+            </div>
+
+            <div class="mySlides">
+              <div class="numbertext">5 / 5</div>
+                <img src="Pictures/PromoHorarios.png" class="SlidePic">
+            </div>
+
+            <!-- Next and previous buttons -->
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+            <!-- Image text -->
+            <div class="caption-container">
+              <p id="caption"></p>
+            </div>
+
+            <!-- Thumbnail images -->
+            <div class="row">
+              <div class="column">
+                <img class="demo cursor" src="Pictures/PromoServicios.png" style="width:100%; height: 5%" onclick="currentSlide(1)" alt="Servicios">
+              </div>
+              <div class="column">
+                <img class="demo cursor" src="Pictures/PromoProg.png" style="width:100%; height: 5%" onclick="currentSlide(2)" alt="Programación">
+              </div>
+              <div class="column">
+                <img class="demo cursor" src="Pictures/PromoOtro.png" style="width:100%; height: 5%" onclick="currentSlide(3)" alt="Otros Servicios">
+              </div>
+              <div class="column">
+                <img class="demo cursor" src="Pictures/PromoTrad.png" style="width:100%; height: 5%" onclick="currentSlide(4)" alt="Traducción">
+              </div>
+              <div class="column">
+                <img class="demo cursor" src="Pictures/PromoHorarios.png" style="width:100%; height: 5%" onclick="currentSlide(5)" alt="Horarios">
+              </div>
+            </div>
+        </div>
+        
+        <iframe
+            src="https://www.youtube.com/embed/4BcZMPoEe_E">
+        </iframe>
+        
+        <h1 id='contacto' class='Section'>Contáctenos</h1>
+        <h3>Horarios de atención:</h3>
+        <div class="Time">
+            <div class="Day">
+                <p>Lunes a Viernes</p>                
+                <div class="Clock">12:00</div>
+                <div class="Dash">-</div>
+                <div class="Clock">18:00</div>
+            </div>
+            <div class="Day">
+                <p> Sábados</p>
+                <div class="Clock">12:00</div>
+                <div class="Dash">-</div>
+                <div class="Clock">16:00</div>
+            </div>
+            
+        </div>
+        
+        <div class="Social">
+            <a href="https://www.facebook.com/profile.php?id=100095751032284" target="_blank">
+                <span class="LinkBtn">
+                    <img class="SocialIcon" src="Pictures/FacebookIcon.png">
+                    Borgonovo T&P
+                </span>
+            </a>
+            <a href="https://api.whatsapp.com/send?phone=543562524286" target="_blank">
+                <span class="LinkBtn">
+                    <img class="SocialIcon" src="Pictures/WhatsAppIcon.png">
+                    +54 3562 524286
+                </span>
+            </a>
+            <div Class="Space"></div>            
+                <span class="LinkBtn">
+                    <img class="SocialIcon" src="Pictures/PhoneIcon.png">
+                    +54 3562 524286
+                </span>                   
+                <span class="LinkBtn" id="LongText">
+                    <img class="SocialIcon" src="Pictures/MailIcon.png">
+                    jorgenborgonovo97@gmail.com
+                </span>
+        </div>
+           
+    </body>
+</html>
+
+
+<!-- To Do: Format Texts, add video -->
