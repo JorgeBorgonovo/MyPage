@@ -1,0 +1,611 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/css.css to edit this template
+*/
+/* 
+    Created on : 23 ago 2023, 15:58:25
+    Author     : jorge
+*/
+
+/* Tags
+    /*Background*/
+    /*Border*/
+    /*Color*/
+    /*Dimension*/
+    /*Font*/
+    /*Position*/
+    /*Shape*/
+    /*Text*/
+    
+/*-----------------------------------------Header-----------------------------------------*/
+header{
+    /*Background*/
+    background-color: #000000;
+    /* Border*/
+    border-bottom-style: solid;
+    border-bottom-color:#ffffff;
+    /*Dimensions*/
+    height: 10%;
+    width: 100%;    
+    margin-right: 0;
+    /*Position*/
+    top: 0;
+    left:0;
+    position: fixed;
+    z-index: 1
+}
+
+div.Title{
+    /*Background*/
+    background-color: black; 
+    /*Border*/
+    /*Color*/
+    color: white;
+    /*Dimension*/
+    height: 100%;
+    width: 45%;
+    font-size: 2.5vh;
+    /*Position*/
+    float: left
+
+}
+
+div.Nav{
+    /*Background*/
+        background-color: #000000;
+    /*Border*/
+        border-right-width: 0.2vh;
+        border-right-style: solid;
+        border-left-width: 0.2vh;
+        border-left-style: solid;
+        border-left-color: white;
+    /*Dimension*/
+        height: 100%; 
+        width: 15%;
+    /*Position*/
+        float: left;
+
+    /*Text*/
+        text-align: center;
+
+}
+
+.Nav h2{ 
+        font-size: 3.5vh;
+}
+
+div.Settings{
+    /*Background*/
+        background-color: #000000;
+    /*Color*/
+    /*Dimension*/
+        height: 9vh; 
+        width: 8vh;
+    /*Position*/
+    float: left;
+    /*Text*/
+    
+}
+
+#Gear{
+    /*Dimension*/
+    height: 80%; 
+    width: 110%;
+    /*Position*/
+    margin-left: 3%;
+    margin-top: 10%;
+    margin-bottom: 3vh;
+    
+    
+}
+
+a.Nav:link{
+    /*Color*/
+    color:#ffffff;
+}
+
+a.Nav:visited{
+    /*Color*/
+    color:#ffffff;
+
+}
+
+/*Menu List*/
+.Settings .Items {
+    /*Background*/
+    background: #000000;
+    /*Border*/
+    border-radius: 15px;  
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    /*Color*/
+    color: #ffffff;
+    /*Dimension*/
+    max-height: 295px;
+    width: 200px;
+    /*Position*/
+    position: absolute;
+    right: 0;  
+    overflow-y: auto;  
+    padding: 10px;
+    padding-bottom: 20px;
+    margin-top: -0.1px;
+    /*Animation*/
+
+}
+
+.Settings .Items .MenuItem{
+    /*Background*/
+    background: inherit;
+    /*Border*/
+    border-radius: 8px;
+    /*Color*/
+    color:inherit;
+    /*Cursor*/
+    cursor: default;
+    /*Dimension*/  
+    height: 55px;
+    /*Position*/
+    display: flex;  
+    padding: 0 16px;  
+    align-items: center
+  
+}
+
+.Settings .Items .MenuItem i{
+    /*Font*/
+    font-size: 25px;
+    /*Position*/
+    margin-right: 12px
+}
+.Settings .Items .MenuItem .ItemText {
+    /*Color*/
+    color: #ffffff;
+    /*Font*/
+    font-size: 18px 
+}
+
+.Menu i {
+    /*Font*/
+    font-size: 25px;
+    /*Animation*/
+}
+
+.Settings.active .Items {
+    /*Color*/
+    opacity: 0;
+    /*Dimension*/
+    height: 24vh;
+    /*Position*/
+    display: block;    
+    z-index: 10;
+    /*Animation*/
+}
+
+
+/* Style Toggle*/
+.dropbtn {
+    /*Background*/
+    background-color: #3498DB;
+    /*Border*/
+    border: none;
+    /*Color*/
+    color: white;
+    /*Cursor*/
+    cursor: pointer;
+    /*Font*/
+    font-size: 12px;
+    /*Position*/
+    padding: 12px;
+    margin-left: 1.7vh
+}
+
+.dropbtn:hover, .dropbtn:focus {
+    background-color: #2980B9
+}
+
+.dropdown {
+    /*Position*/
+    position: relative;
+    display: inline-block;
+    padding-left: 60px
+}
+
+.dropdown-content {
+    /*Background*/
+    background-color: #f1f1f1;
+    /*Border*/
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    /*Dimension*/
+    min-width: 100px;
+    /*Position*/
+    display: none;
+    position: absolute;
+    right:0;    
+    z-index: 1
+}
+
+.dropdown-content a {
+    /*Color*/
+    color: black;
+    /*Position*/
+    padding: 12px 16px;
+    display: block;
+    /*Text*/
+    text-decoration: none
+    
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd
+}
+
+.show {
+    display:block
+}
+
+
+/*Night Mode Toggle*/
+input[type=checkbox]{
+	height: 0;
+	width: 0;
+	visibility: hidden
+}
+
+.DNToggle{
+    /*Background*/
+    background: grey;
+    /*Border*/
+    border-radius: 100px;
+    /*Cursor*/
+    cursor: pointer;
+    /*Dimension*/
+    width: 44px;
+    height: 20px;
+    /*Position*/
+    left: 15px;    
+    display: block;    
+    position: relative;
+    /*Text*/
+    text-indent: -9999px    
+}
+
+.DNToggle:after {
+    /*Background*/
+    background: #ffffff;
+    /*Border*/
+    border-radius: 90px;
+    /*Dimension*/
+    width: 15px;
+    height: 16px;
+    /*Position*/    
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 2px;    
+    /*Animation*/
+    transition: 0.3s
+}
+
+input:checked + .DNToggle {
+	background: #ffffff
+}
+
+input:checked + .DNToggle:after {
+    /*Background*/
+    background: #000000;
+    /*Position*/
+    left: calc(100% - 2px);
+    /*Animation*/    
+    transform: translateX(-100%)    
+}
+
+.DNToggle:active:after {
+	width: 10px
+}
+
+/*Language Toggle*/
+
+
+
+/*-----------------------------------------Body-----------------------------------------*/
+
+body{
+    /*Background*/
+    background-color: #000000;
+    background-size: cover;
+    background-attachment: fixed;
+    /*Color*/
+    color: #ffffff;
+    /*Font*/
+    font-family: "Arial"
+}
+
+body.dark-theme{
+    /*Background*/    
+    background:#e5e9f7;
+    background-size: cover;
+    background-attachment: fixed;
+    /*Color*/
+    color:#000000;
+    /*Font*/
+    font-family: "Arial"
+}
+
+.Paragraph{
+    text-justify: inter-cluster
+}
+
+/*Title*/
+h1.Section{
+    /*Font*/
+        font-family: Times New Roman;
+    /*Text*/
+        text-align: center
+}
+
+h3{
+    text-align: center;
+    
+}
+
+/*Single Picture*/
+.StaticImg{
+    /*Dimensions*/
+    height: 500px;    
+    width: fit-content;
+    /*Position*/
+    clear: both;
+    display: block;
+    margin: auto
+
+}
+
+/*Picture Reel*/
+
+.container {
+  /*Position*/
+  position: relative
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none
+}
+
+.SlidePic{
+    /*Dimensions*/
+    width: 100%;
+    height: 80%;
+    /*Position*/
+    z-index: 2
+}
+.cursor {
+  cursor: pointer
+}
+
+/*Next & previous buttons*/
+.prev,
+.next {
+  /*Border*/
+  border-radius: 0 3px 3px 0;
+  /*Color*/
+  color: white;
+  /*Cursor*/
+  cursor: pointer;
+  /*Dimension*/
+  width: auto;
+  padding: 16px;
+  /*Font*/
+  margin-top: -50px;
+  font-weight: bold;
+  font-size: 20px;
+  /*Position*/
+  position: absolute;
+  top: 40%;
+  user-select: none;
+  -webkit-user-select: none
+}
+
+/*Button Position*/
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px
+}
+
+/*Button See-Through*/
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8)
+}
+
+/*Image Number Text*/
+.numbertext {
+  /*Color*/
+  color: #f2f2f2;
+  /*Font*/
+  font-size: 12px;
+  /*Position*/
+  padding: 8px 12px;
+  position: absolute;
+  top: 0
+}
+
+/*Text Container*/
+.caption-container {
+  /*Background*/
+  background-color: #222;
+  /*Color*/
+  color: white;
+  /*Dimension*/
+  height: 5%;
+  /*Font*/
+  font-size: 2.5vh;
+  /*Position*/
+  padding: 2px 16px;
+  /*Text*/
+  text-align: center;
+  
+}
+
+.row:after {
+  /*Position*/
+  display: table;
+  clear: both;
+  /*Other*/
+  content: "";
+
+}
+
+/*Columns*/
+.column {
+  /*Dimension*/
+  width: 20%;
+  /*Position*/
+  float: left
+
+}
+
+/*Thumbnail Transparency*/
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+
+.Time{
+    /*Dimension*/
+    width: 100%;
+    height: 10%;
+    
+}
+
+.Day{
+    /*Background*/
+    background-color: #66ccff;
+    /*Border*/
+    border-style: solid;
+    border-color: #000000;
+    border-width: 0.3vh;
+    /*Dimension*/
+    width:20%;
+    height:100%;
+    /*Position*/
+    padding-bottom: 1%;
+    float: left;    
+    margin-left: 20%;
+    padding-left: 1vh    
+    
+}
+
+.Day p{    
+    /*Font*/
+    font-family: "Georgia", serif;
+    font-size: 4vh;
+    margin-top: 2%;
+    /*Text*/
+    text-align: center
+}
+
+.Clock{
+    /*Background*/
+    background-color: #000000;
+    /*Border*/
+    border-style: groove;
+    /*Color*/
+    color: #ffffff;
+    /*Dimension*/     
+    height: 35%;
+    width: 30%;
+    /*Font*/
+    font-family: fantasy, sans-serif;
+    font-size: 4.5vh;
+    /*Position*/
+    float: left;
+    margin-top: -5%;
+    margin-left: 7%;
+    margin-bottom: 10%;
+    padding-top: 1%;
+    padding-bottom: 1.7%; 
+    /*Text*/
+    text-align: center
+}
+
+.Dash{
+    float: left;
+    margin-left: 2.5vh;
+    font-size: 3vh
+    
+}
+
+
+/*Social*/
+.Social{
+    /*Dimension*/
+    height: 10%;
+    width: 100%;
+    clear: left
+}
+
+.LinkBtn{
+    /*Background*/
+    background-color:#66ffcc;
+    /*Border*/
+    border-width: 0.3vh;
+    border-style: solid;
+    border-color: #0000ff;
+    /*Color*/
+    color:#000000;
+    /*Dimension*/
+    width: 41.5vh;
+    height: 10vh;
+    /*Font*/
+    font-size: 3vh;
+    /*Position*/
+    margin-left: 1vh;
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+    float: left
+    
+}
+#LongText{
+    font-size: 1.7vh;
+}
+
+.LinkBtn:hover{
+    background-color: #00cccc
+}
+
+.Social .LinkBtn .SocialIcon{
+    /*Dimension*/
+    height: 7vh;
+    width: 7vh;
+    /*Position*/
+    padding-top: 1.5vh;
+    padding-left: 2vh;
+    padding-bottom: 2vh;    
+    vertical-align: middle
+}
+
+/*-----------------------------------------Footer-----------------------------------------*/
+
+footer{
+    /*Background*/
+    background-color: #000f;
+    /*Color*/
+    color: #ffffff
+}
+
+/*-----------------------------------------Script-----------------------------------------*/
+
+.rotateback{
+  transform: rotate(0deg);
+  transition: transform 0.4s linear;
+}
+
+.rotate{
+  transform: rotate(0.50turn);
+  transition: transform 0.4s linear;
+}
