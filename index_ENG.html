@@ -7,6 +7,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link id="Fancy" rel="stylesheet" type="text/css" href="Style.css" />
         <link id="Simple" rel="stylesheet" type="text/css" href="Style_Simple.css" disabled="disabled"/>
+        <link id="NoPic" rel="stylesheet" type="text/css" href="Nopics.css" disabled="disabled"/>
     </head>
     
    <header>        
@@ -36,9 +37,9 @@
                   <div class="dropdown">
                     <button onclick="myFunction()" class="dropbtn">Styles</button>
                     <div id="myDropdown" class="dropdown-content">
-                        <a href="#" onclick="toggleStyle(2)">Simple</a>
+                        <a href="#" onclick="toggleStyle(0)">Simple</a>
                         <a href="#" onclick="toggleStyle(1)">Fancy</a>
-                        <a href="#">No pictures</a>
+                        <a href="#" onclick="toggleStyle(2)">No Pictures</a>
                     </div>
                   </div>
                 </li>
@@ -48,7 +49,7 @@
                 </li>
                 <li class="MenuItem">
                   <span class="ItemText">Language</span>
-                  <a href="Index.html"><button id="LangToggle" 
+                  <a href="index.html"><button id="LangToggle" 
                     style="background-color : #00ffcc; 
                     cursor: pointer; margin-left: 5vh">
                     Español
@@ -176,18 +177,14 @@
                 </span>
             </a>
             <div Class="Space"></div>
-            <a href="tel:54-3562-524286" target="_blank">
                 <span class="LinkBtn">
                     <img class="SocialIcon" src="Pictures/PhoneIcon.png">
                     +54 3562 524286
-                </span>
-            </a>
-            <a href="mailto:jorgenborgonovo97@gmail.com" target="_blank">                    
+                </span>                 
                 <span class="LinkBtn" id="LongText">
                     <img class="SocialIcon" src="Pictures/MailIcon.png">
                     jorgenborgonovo97@gmail.com
                 </span>
-            </a>
         </div>
            
     </body>

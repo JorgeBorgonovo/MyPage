@@ -589,13 +589,12 @@ h3{
     vertical-align: middle
 }
 
-/*-----------------------------------------Footer-----------------------------------------*/
-
-footer{
-    /*Background*/
-    background-color: #000f;
-    /*Color*/
-    color: #ffffff
+iframe{
+    height: 75vh;
+    width: 120vh;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+    margin-left: 30vh
 }
 
 /*-----------------------------------------Script-----------------------------------------*/
